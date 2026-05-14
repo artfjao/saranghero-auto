@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Saranghero Auto-Type",
+  "version": "2.0",
+  "description": "Automatically types quotes on saranghero.com instantly with floating dashboard.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://saranghero.com/*",
+    "*://*.saranghero.com/*"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://saranghero.com/*",
+        "*://*.saranghero.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
